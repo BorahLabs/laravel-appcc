@@ -1,0 +1,45 @@
+{
+    "name": "appcc-digital/laravel-appcc",
+    "description": "A fluent, type-safe PHP client for the APPCC Digital API",
+    "keywords": ["laravel", "appcc", "food-safety", "haccp"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "illuminate/http": "^11.0|^12.0",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/contracts": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^3.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AppccDigital\\LaravelAppcc\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AppccDigital\\LaravelAppcc\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AppccDigital\\LaravelAppcc\\AppccServiceProvider"
+            ],
+            "aliases": {
+                "Appcc": "AppccDigital\\LaravelAppcc\\Facades\\Appcc"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
